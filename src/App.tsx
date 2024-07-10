@@ -1,11 +1,10 @@
 import React from 'react';
+import Component from "./core";
 
 function App() {
-  return (
-    <div>
-      zxc
-    </div>
-  );
+    return (
+        <Component/>
+    );
 }
 
 export default App;
