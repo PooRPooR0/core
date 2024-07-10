@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import CustomApp from "./CustomApp";
+import {App} from "./core/app";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <CustomApp />
+    <App />
   </React.StrictMode>
 );
