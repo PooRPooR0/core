@@ -1,26 +1,22 @@
 {
   "compilerOptions": {
+    "outDir": "./build",
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
+    "module": "es6",
+    "jsx": "react-jsx",
+    "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "allowJs": true,
+    "plugins": [{"name": "typescript-plugin-css-modules"}],
+    "paths": {
+      "baseUrl": ["."],
+      "CustomCore/*": ["./src/*", "./packages/core/*"],
+      "CorePackage/*": ["./packages/core/*"]
+    }
   },
-  "include": [
-    "src"
+  "exclude": [
+    "node_modules",
+    "build"
   ]
 }
