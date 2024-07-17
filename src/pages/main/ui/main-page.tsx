@@ -9,18 +9,20 @@ import {ClearPostsButton} from "CustomCore/features/clear-posts";
 interface MainPageProps {
     posts: Array<Post>;
     loading: boolean;
+    someNewField: string;
 
     getPosts: () => void;
     clearData: () => void;
 }
 
-const MainPage = ({posts, loading, ...props}: MainPageProps) => {
+const MainPage = ({posts, loading, someNewField, ...props}: MainPageProps) => {
     useEffect(() => {
         props.getPosts();
     }, [])
 
     return (
         <div className={classes.container}>
+            {someNewField} - should be zxc
             {loading ? <div>loading...</div> : <ClearPostsButton/>}
             core main page {a}
             <Link to="/about">About</Link>
@@ -31,6 +33,7 @@ const MainPage = ({posts, loading, ...props}: MainPageProps) => {
 const mapStateToProps = (state: any) => ({
     posts: state.post.data,
     loading: state.post.loading,
+    someNewField: state.post.someNewField,
 })
 
 const ConnectedMainPage = connect(mapStateToProps, {getPosts, clearData})(MainPage)
