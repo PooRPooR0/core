@@ -12,9 +12,9 @@
     "paths": {
       "baseUrl": ["."],
 
-      "CustomCore/*": ["./src/*", "./packages/custom-module/*", "./packages/core/*"],
-      "CorePackage/*": ["./packages/core/*"],
-      "LibPackage/*": ["./packages/custom-module/*"]
+      "@src/*": ["./src/*", "./packages/custom-module/*", "./packages/core/*"],
+      "@core/*": ["./packages/core/*"],
+      "@custom-module/*": ["./packages/custom-module/*"]
     }
   },
   "exclude": [
