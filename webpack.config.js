@@ -14,12 +14,15 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
 		alias: {
-			CustomCore: path.resolve(__dirname, 'src'),
+			CustomCore: [
+				path.resolve(__dirname, 'src'),
+				path.resolve(__dirname, 'packages/custom-module'),
+				path.resolve(__dirname, 'packages/core')
+			],
+
 			CorePackage: path.resolve(__dirname, 'packages/core'),
+			LibPackage: path.resolve(__dirname, 'packages/custom-module'),
 		},
-		fallback: {
-			CustomCore: path.resolve(__dirname, 'packages/core'),
-		}
 	},
 	module: {
 		rules: [

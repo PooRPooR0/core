@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from "react-redux";
 import {clearData, Post} from "CustomCore/entities/post";
+import {getName} from "CustomCore/features/clear-posts";
 
 interface ClearPostsButtonProps {
     posts: Array<Post>;
@@ -9,7 +10,7 @@ interface ClearPostsButtonProps {
 
 const ClearPostsButton = ({posts, ...props}: ClearPostsButtonProps) => {
     return (
-        <button onClick={() => props.clearData()}>{posts.length} ssss</button>
+        <button onClick={() => props.clearData()}>{posts.length} src {getName()}</button>
     );
 };
 
