@@ -1,3 +1,6 @@
 [submodule "packages/core"]
 	path = packages/core
 	url = https://github.com/PooRPooR0/core-module
+[submodule "packages/custom-module"]
+	path = packages/custom-module
+	url = https://github.com/PooRPooR0/custom-module.git
